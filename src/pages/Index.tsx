@@ -42,10 +42,11 @@ const Index = () => {
           <h2 className="text-3xl font-bold mb-16 text-center bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">About Me</h2>
           <div className="max-w-3xl mx-auto">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm a passionate Full Stack Developer with experience in building modern web applications.
-              My journey in software development started with a deep curiosity for technology and has
-              evolved into a professional career where I create efficient, scalable, and user-friendly
-              solutions.
+            Hello 👋, I'm Pedro Paula, a Student at the University of the Azores and I'm studying Web Development. 
+            I'm interested in learning NodeJS, C#, Computer Science and Team Management. 
+            I currently work with HTML5, CSS/SASS, JavaScript, PHP and SQL. 
+            I use Bootstrap as a JavaScript framework. In addition to Programming, 
+            I am a Roller Hockey player and base coach.
             </p>
           </div>
         </div>
