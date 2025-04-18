@@ -12,8 +12,12 @@ const Index = () => {
         <div className="container px-4 text-center z-10">
           <div className="animate-fade-in space-y-6">
             <div className="flex justify-center mb-8">
-              <Avatar className="w-32 h-32 border-4 border-primary/20">
-                <AvatarImage src="/lovable-uploads/5857ec7b-8184-41c7-a84f-16e4e618e957.png" alt="Pedro Paula" />
+              <Avatar className="w-48 h-48 md:w-64 md:h-64 border-6 border-primary/20">
+                <AvatarImage 
+                  src="/lovable-uploads/5857ec7b-8184-41c7-a84f-16e4e618e957.png" 
+                  alt="Pedro Paula" 
+                  className="object-cover scale-110"
+                />
                 <AvatarFallback>PP</AvatarFallback>
               </Avatar>
             </div>
