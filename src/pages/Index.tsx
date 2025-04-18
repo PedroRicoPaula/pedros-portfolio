@@ -42,11 +42,11 @@ const Index = () => {
           <h2 className="text-3xl font-bold mb-16 text-center bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">About Me</h2>
           <div className="max-w-3xl mx-auto">
             <p className="text-lg text-muted-foreground leading-relaxed">
-            Hello 👋, I'm Pedro Paula, a Student at the University of the Azores and I'm studying Web Development. 
-            I'm interested in learning NodeJS, C#, Computer Science and Team Management. 
-            I currently work with HTML5, CSS/SASS, JavaScript, PHP and SQL. 
-            I use Bootstrap as a JavaScript framework. In addition to Programming, 
-            I am a Roller Hockey player and base coach.
+            Hello 👋 I'm Pedro Paula, a Web Development student at the University of the Azores, currently doing an internship at Ahau Software.
+            I have hands-on experience with technologies such as HTML5, CSS/SASS, JavaScript, PHP, C#, ASP.NET, .NET, and SQL. 
+            I often use Bootstrap to streamline my frontend development, and I follow the Scrum methodology in my workflow.
+            I'm passionate about expanding my knowledge in areas like Node.js, C#, computer science, and team leadership.
+            Outside of tech, I'm an active roller hockey player and a base coach, bringing the same energy and teamwork from the rink into every project I work on.
             </p>
           </div>
         </div>
@@ -88,20 +88,30 @@ const Index = () => {
           <h2 className="text-3xl font-bold mb-16 text-center bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">My Work</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="glass-card p-8 group hover:scale-105 transition-transform duration-300">
-              <h3 className="text-xl font-semibold mb-4">Project 1</h3>
+              <h3 className="text-xl font-semibold mb-4">Sistema Booking</h3>
               <p className="text-muted-foreground mb-6">
-                Description of your first major project or work experience.
+                Booking System working on the console
               </p>
               <Button variant="outline" size="sm" className="group">
                 View Project
+                <a
+                  href="https://github.com/PedroRicoPaula/Project_Booking"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                </a>
                 <ExternalLink className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
               </Button>
             </Card>
             <Card className="glass-card p-8 group hover:scale-105 transition-transform duration-300">
-              <h3 className="text-xl font-semibold mb-4">Project 2</h3>
+              <h3 className="text-xl font-semibold mb-4">Rent a Car</h3>
               <p className="text-muted-foreground mb-6">
-                Description of your second major project or work experience.
+                School Project
               </p>
+              <a
+                  href="https://github.com/PedroRicoPaula/Rent-a-Car"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                </a>
               <Button variant="outline" size="sm" className="group">
                 View Project
                 <ExternalLink className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
@@ -127,7 +137,7 @@ const Index = () => {
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href="work@pedropaula.com"
               className="flex items-center gap-3 text-lg hover:text-primary transition-colors group"
             >
               <Mail className="w-6 h-6" />
@@ -135,7 +145,7 @@ const Index = () => {
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/PedroRicoPaula"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 text-lg hover:text-primary transition-colors group"
