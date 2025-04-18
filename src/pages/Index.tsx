@@ -1,8 +1,8 @@
-
 import { Card } from "@/components/ui/card";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, ExternalLink, ArrowRight, Code, Brush, Database } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Index = () => {
   return (
@@ -11,6 +11,12 @@ const Index = () => {
       <section className="min-h-[90vh] flex items-center justify-center relative overflow-hidden">
         <div className="container px-4 text-center z-10">
           <div className="animate-fade-in space-y-6">
+            <div className="flex justify-center mb-8">
+              <Avatar className="w-32 h-32 border-4 border-primary/20">
+                <AvatarImage src="/lovable-uploads/5857ec7b-8184-41c7-a84f-16e4e618e957.png" alt="Pedro Paula" />
+                <AvatarFallback>PP</AvatarFallback>
+              </Avatar>
+            </div>
             <h1 className="text-4xl md:text-7xl font-bold mb-6 bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent">
               Pedro Paula
             </h1>
