@@ -92,30 +92,24 @@ const Index = () => {
               <p className="text-muted-foreground mb-6">
                 Booking System working on the console
               </p>
-              <Button variant="outline" size="sm" className="group">
-                View Project
-                <a
-                  href="https://github.com/PedroRicoPaula/Project_Booking"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                </a>
-                <ExternalLink className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-              </Button>
+              <a href="https://github.com/PedroRicoPaula/Project_Booking" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="sm" className="group">
+                  View Project
+                  <ExternalLink className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </a>
             </Card>
             <Card className="glass-card p-8 group hover:scale-105 transition-transform duration-300">
               <h3 className="text-xl font-semibold mb-4">Rent a Car</h3>
               <p className="text-muted-foreground mb-6">
                 School Project
               </p>
-              <a
-                  href="https://github.com/PedroRicoPaula/Rent-a-Car"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                </a>
-              <Button variant="outline" size="sm" className="group">
-                View Project
-                <ExternalLink className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-              </Button>
+              <a href="https://github.com/PedroRicoPaula/Rent-a-Car" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="sm" className="group">
+                  View Project
+                  <ExternalLink className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </a>
             </Card>
           </div>
         </div>
