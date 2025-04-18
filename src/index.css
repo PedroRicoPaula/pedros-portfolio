@@ -5,25 +5,25 @@
  
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 263 55% 70%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --background: 240 20% 7%; /* Dark blue-black background */
+    --foreground: 210 50% 98%; /* Bright, slightly blue-tinted white */
+    --card: 240 15% 10%; /* Slightly lighter dark blue-black for cards */
+    --card-foreground: 210 50% 98%;
+    --popover: 240 15% 10%;
+    --popover-foreground: 210 50% 98%;
+    --primary: 210 80% 60%; /* Bright, saturated blue */
+    --primary-foreground: 240 10% 98%;
+    --secondary: 210 15% 25%; /* Muted blue-gray */
+    --secondary-foreground: 210 50% 98%;
+    --muted: 210 15% 20%; /* Dark blue-gray muted color */
+    --muted-foreground: 210 20% 70%;
+    --accent: 210 25% 30%; /* Deeper blue-gray accent */
+    --accent-foreground: 210 50% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --border: 210 15% 25%; /* Blue-gray border */
+    --input: 210 15% 25%;
+    --ring: 210 80% 70%; /* Bright blue ring */
     --radius: 0.75rem;
   }
 }
@@ -41,4 +41,3 @@
     @apply bg-secondary/50 backdrop-blur-sm border border-white/10 rounded-lg;
   }
 }
-
