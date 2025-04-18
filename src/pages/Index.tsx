@@ -25,7 +25,7 @@ const Index = () => {
               Pedro Paula
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-              Full Stack Developer
+              Web Developer
             </p>
             <Button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                     className="group">
