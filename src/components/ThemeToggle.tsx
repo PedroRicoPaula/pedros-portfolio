@@ -6,11 +6,15 @@ import { useTheme } from "next-themes";
 export function ThemeToggle() {
   const { setTheme, theme } = useTheme();
 
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
   return (
     <Button
       variant="ghost"
       size="icon"
-      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      onClick={toggleTheme}
       aria-label="Toggle theme"
       className="hover:bg-transparent"
     >
