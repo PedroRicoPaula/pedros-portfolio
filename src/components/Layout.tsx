@@ -1,11 +1,12 @@
 
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Menu, X, ArrowUp } from 'lucide-react';
 import { Button } from './ui/button';
 import { ThemeToggle } from './ThemeToggle';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -14,6 +15,23 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const aboutSection = document.getElementById('about');
+      if (aboutSection) {
+        const showButton = window.scrollY >= aboutSection.offsetTop;
+        setShowScrollTop(showButton);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -100,6 +118,19 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <main className="pt-16">
         {children}
       </main>
+
+      {/* Scroll to top button */}
+      {showScrollTop && (
+        <Button
+          variant="secondary"
+          size="icon"
+          className="fixed bottom-6 left-6 z-50 rounded-full shadow-lg hover:scale-110 transition-all duration-300"
+          onClick={scrollToTop}
+          aria-label="Scroll to top"
+        >
+          <ArrowUp className="h-5 w-5" />
+        </Button>
+      )}
     </div>
   );
 };
