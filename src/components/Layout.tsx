@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
+import { ThemeToggle } from './ThemeToggle';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,46 +22,74 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-bold">Pedro Paula</h1>
             
-            {/* Mobile menu button */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="lg:hidden"
-              onClick={toggleMenu}
-            >
-              {isMenuOpen ? <X /> : <Menu />}
-            </Button>
+            <div className="flex items-center gap-4">
+              {/* Desktop menu */}
+              <div className="hidden lg:flex gap-8">
+                <button 
+                  onClick={() => scrollToSection('about')} 
+                  className="relative text-foreground/80 hover:text-primary transition-colors after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-primary after:left-0 after:bottom-0 after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+                >
+                  About
+                </button>
+                <button 
+                  onClick={() => scrollToSection('services')} 
+                  className="relative text-foreground/80 hover:text-primary transition-colors after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-primary after:left-0 after:bottom-0 after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+                >
+                  Services
+                </button>
+                <button 
+                  onClick={() => scrollToSection('work')} 
+                  className="relative text-foreground/80 hover:text-primary transition-colors after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-primary after:left-0 after:bottom-0 after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+                >
+                  Work
+                </button>
+                <button 
+                  onClick={() => scrollToSection('contact')} 
+                  className="relative text-foreground/80 hover:text-primary transition-colors after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-primary after:left-0 after:bottom-0 after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+                >
+                  Contact
+                </button>
+              </div>
 
-            {/* Desktop menu */}
-            <div className="hidden lg:flex gap-8">
-              <button onClick={() => scrollToSection('about')} className="text-foreground/80 hover:text-foreground">
-                About
-              </button>
-              <button onClick={() => scrollToSection('services')} className="text-foreground/80 hover:text-foreground">
-                Services
-              </button>
-              <button onClick={() => scrollToSection('work')} className="text-foreground/80 hover:text-foreground">
-                Work
-              </button>
-              <button onClick={() => scrollToSection('contact')} className="text-foreground/80 hover:text-foreground">
-                Contact
-              </button>
+              <ThemeToggle />
+
+              {/* Mobile menu button */}
+              <Button
+                variant="ghost"
+                size="icon"
+                className="lg:hidden"
+                onClick={toggleMenu}
+              >
+                {isMenuOpen ? <X /> : <Menu />}
+              </Button>
             </div>
           </div>
 
           {/* Mobile menu */}
           {isMenuOpen && (
             <div className="lg:hidden mt-4 flex flex-col gap-4 pb-4">
-              <button onClick={() => scrollToSection('about')} className="text-foreground/80 hover:text-foreground">
+              <button 
+                onClick={() => scrollToSection('about')} 
+                className="text-foreground/80 hover:text-primary transition-colors"
+              >
                 About
               </button>
-              <button onClick={() => scrollToSection('services')} className="text-foreground/80 hover:text-foreground">
+              <button 
+                onClick={() => scrollToSection('services')} 
+                className="text-foreground/80 hover:text-primary transition-colors"
+              >
                 Services
               </button>
-              <button onClick={() => scrollToSection('work')} className="text-foreground/80 hover:text-foreground">
+              <button 
+                onClick={() => scrollToSection('work')} 
+                className="text-foreground/80 hover:text-primary transition-colors"
+              >
                 Work
               </button>
-              <button onClick={() => scrollToSection('contact')} className="text-foreground/80 hover:text-foreground">
+              <button 
+                onClick={() => scrollToSection('contact')} 
+                className="text-foreground/80 hover:text-primary transition-colors"
+              >
                 Contact
               </button>
             </div>

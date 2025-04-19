@@ -14,7 +14,7 @@ const Index = () => {
             <div className="flex justify-center mb-8">
               <Avatar className="w-48 h-48 md:w-64 md:h-64 border-6 border-primary/20">
                 <AvatarImage 
-                  src="/lovable-uploads/5857ec7b-8184-41c7-a84f-16e4e618e957.png" 
+                  src="/lovable-uploads/3469ef6f-4018-4235-a06b-b391af3be149.png" 
                   alt="Pedro Paula" 
                   className="object-cover scale-110"
                 />
@@ -131,7 +131,7 @@ const Index = () => {
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="work@pedropaula.com"
+              href="mailto:work@pedropaula.com"
               className="flex items-center gap-3 text-lg hover:text-primary transition-colors group"
             >
               <Mail className="w-6 h-6" />
