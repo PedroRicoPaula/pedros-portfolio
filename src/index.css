@@ -5,6 +5,31 @@
  
 @layer base {
   :root {
+    /* Light theme variables */
+    --background: 0 0% 100%; /* White background */
+    --foreground: 240 10% 3.9%; /* Near black text */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 210 80% 60%; /* Bright blue */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%; /* Light gray */
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 210 25% 30%; /* Blue-gray accent */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 210 80% 60%;
+    --radius: 0.75rem;
+  }
+  
+  .dark {
+    /* Dark theme variables - keep what was already defined */
     --background: 240 20% 7%; /* Dark blue-black background */
     --foreground: 210 50% 98%; /* Bright, slightly blue-tinted white */
     --card: 240 15% 10%; /* Slightly lighter dark blue-black for cards */
