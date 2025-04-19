@@ -21,7 +21,7 @@ const Index = () => {
                 <AvatarFallback>PP</AvatarFallback>
               </Avatar>
             </div>
-            <h1 className="text-4xl md:text-7xl font-bold mb-6 bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-7xl font-bold mb-6 bg-gradient-to-b from-black to-gray-300 bg-clip-text text-transparent">
               Pedro Paula
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
