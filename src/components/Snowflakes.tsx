@@ -1,8 +1,21 @@
-// src/components/Snowflakes.tsx (Versão Melhorada)
+// src/components/Snowflakes.tsx
 import { useEffect, useState, useRef, useCallback } from 'react';
+import { useTheme } from 'next-themes'; // Importar o hook useTheme
+import { cn } from '@/lib/utils'; // Assumindo que cn está disponível para utilitários de classe
 
-const Snowflakes = () => {
-  const [snowflakes, setSnowflakes] = useState<Array<{ id: number; left: number; delay: number; duration: number; size: number }>>([]);
+// Definir a interface para cada floco de neve
+interface Snowflake {
+  id: number; // Usar number para o ID, mais simples
+  x: number; // Posição horizontal (em porcentagem)
+  size: number; // Tamanho em pixels
+  opacity: number; // Opacidade
+  duration: number; // Duração da animação de queda (em segundos)
+  delay: number; // Atraso da animação (em segundos, pode ser negativo para iniciar em pontos aleatórios)
+}
+
+const Snowflakes: React.FC = () => {
+  const { theme } = useTheme(); // Obter o tema atual (dark/light)
+  const [snowflakes, setSnowflakes] = useState<Snowflake[]>([]);
   const snowflakeIdCounter = useRef(0); // Para garantir IDs únicos para cada floco
 
   // Função para criar um único floco de neve
@@ -45,20 +58,28 @@ const Snowflakes = () => {
   }, [createSnowflake]); // A dependência `createSnowflake` garante que a função é estável
 
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden" style={{ zIndex: -1 }}>
+    <div className="fixed inset-0 pointer-events-none overflow-hidden" style={{ zIndex: -10 }}>
       {snowflakes.map((flake) => (
         <div
           key={flake.id}
           // A classe `animate-snow` deve ser definida em `src/index.css`
-          className="absolute animate-snow opacity-70"
+          className={cn(
+            "absolute rounded-full opacity-70", // Usar rounded-full para div se não usar o caracter ❄
+            // Definir a cor com base no tema. Isso sobrescreve a cor definida em .animate-snow se for diferente.
+            // Para o caracter ❄, a cor é definida no CSS global.
+            // Se preferir divs, use: theme === 'dark' ? 'bg-white' : 'bg-black'
+          )}
           style={{
             left: `${flake.left}%`,
             animationDelay: `${flake.delay}s`,
             animationDuration: `${flake.duration}s`,
-            fontSize: `${flake.size}rem`,
-            // A cor é controlada pela classe `animate-snow` no CSS, que usa `--foreground`
+            fontSize: `${flake.size}rem`, // Para o caracter ❄
+            // Caso estivesse a usar divs em vez de caracteres ❄, o tamanho seria definido aqui:
+            // width: `${flake.size}px`, 
+            // height: `${flake.size}px`,
           }}
         >
+          {/* O caracter floco de neve */}
           ❄
         </div>
       ))}
