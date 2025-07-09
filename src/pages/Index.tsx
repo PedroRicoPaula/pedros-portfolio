@@ -40,7 +40,7 @@ const Index = () => {
             </p>
             
             {/* NOVO: WRAPPER PARA OS DOIS BOTÕES */}
-            <div className="flex flex-col items-center gap-y-4"> {/* Usa flex-col para empilhar, items-center para centrar, e gap-y para espaçamento vertical */}
+            <div className="flex flex-col items-center gap-y-12"> {/* Usa flex-col para empilhar, items-center para centrar, e gap-y para espaçamento vertical */}
               <Button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                       className="group">
                 Get in touch
