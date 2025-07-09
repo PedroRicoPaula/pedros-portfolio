@@ -79,6 +79,6 @@
 
 .animate-snow {
   animation: snow linear infinite;
-  color: hsl(var(--foreground)); /* Altera para branco no modo escuro e preto no modo claro */
+  color: red !important; /* Altera para branco no modo escuro e preto no modo claro */
 }
 }
