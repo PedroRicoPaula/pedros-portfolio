@@ -3,8 +3,19 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, ExternalLink, ArrowRight, Code, Brush, Database } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { ArrowDown } from 'lucide-react'; // Importe o ícone ArrowDown
+import { Button } from "@/components/ui/button"; // Certifique-se de que o Button está importado
 
 const Index = () => {
+  const scrollDown = () => {
+    // Rola para baixo uma altura da viewport (vh)
+    // Pode ajustar o valor (ex: window.innerHeight * 1.5 para 1.5 vezes a altura da tela)
+    window.scrollBy({
+      top: window.innerHeight * 0.8, // Rola 80% da altura da janela para baixo
+      behavior: 'smooth'
+    });
+  };
+  
   return (
     <Layout>
       {/* Hero Section with animation */}
@@ -31,6 +42,16 @@ const Index = () => {
                     className="group">
               Get in touch
               <ArrowRight className="transition-transform group-hover:translate-x-1" />
+            </Button>
+            {/* NOVO: Botão de scroll para baixo */}
+            <Button
+              variant="ghost" // Use um estilo de botão discreto
+              size="icon"     // Tamanho de ícone para a seta
+              className="mt-8 animate-bounce" // Adiciona uma animação de "salto" para chamar a atenção
+              onClick={scrollDown}
+              aria-label="Scroll para baixo"
+            >
+              <ArrowDown className="h-6 w-6" /> {/* Ícone de seta para baixo */}
             </Button>
           </div>
         </div>
