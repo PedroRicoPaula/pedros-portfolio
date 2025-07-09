@@ -21,7 +21,7 @@ const Index = () => {
       {/* Hero Section with animation */}
       <section className="min-h-[90vh] flex items-center justify-center relative overflow-hidden">
         <div className="container px-4 text-center z-10">
-          <div className="animate-fade-in space-y-6">
+          <div className="animate-fade-in space-y-6"> {/* Este div já tem space-y-6 para os elementos acima */}
             <div className="flex justify-center mb-8">
               <Avatar className="w-48 h-48 md:w-64 md:h-64 border-6 border-primary/20">
                 <AvatarImage 
@@ -38,25 +38,29 @@ const Index = () => {
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
               Web Developer
             </p>
-            <Button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="group">
-              Get in touch
-              <ArrowRight className="transition-transform group-hover:translate-x-1" />
-            </Button>
-            {/* NOVO: Botão de scroll para baixo */}
-            <Button
-              variant="ghost" // Use um estilo de botão discreto
-              size="icon"     // Tamanho de ícone para a seta
-              className="mt-8 animate-bounce" // Adiciona uma animação de "salto" para chamar a atenção
-              onClick={scrollDown}
-              aria-label="Scroll para baixo"
-            >
-              <ArrowDown className="h-6 w-6" /> {/* Ícone de seta para baixo */}
-            </Button>
+            
+            {/* NOVO: WRAPPER PARA OS DOIS BOTÕES */}
+            <div className="flex flex-col items-center gap-y-4"> {/* Usa flex-col para empilhar, items-center para centrar, e gap-y para espaçamento vertical */}
+              <Button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                      className="group">
+                Get in touch
+                <ArrowRight className="transition-transform group-hover:translate-x-1" />
+              </Button>
+              
+              {/* Botão de scroll para baixo */}
+              <Button
+                variant="ghost"
+                size="icon"
+                className="animate-bounce" /* Removido o mt-8, pois gap-y-4 no pai já gere o espaçamento */
+                onClick={scrollDown}
+                aria-label="Scroll para baixo"
+              >
+                <ArrowDown className="h-6 w-6" />
+              </Button>
+            </div>
           </div>
         </div>
       </section>
-
       {/* About Section */}
       <section id="about" className="py-32 bg-gradient-to-b from-background to-secondary/20">
         <div className="container px-4">
