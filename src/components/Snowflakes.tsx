@@ -58,7 +58,7 @@ const Snowflakes: React.FC = () => {
   }, [createSnowflake]); // A dependência `createSnowflake` garante que a função é estável
 
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden" style={{ zIndex: -10 }}>
+    <div className="fixed inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 1 }}>
       {snowflakes.map((flake) => (
         <div
           key={flake.id}
