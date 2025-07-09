@@ -64,10 +64,12 @@ const Snowflakes: React.FC = () => {
           key={flake.id}
           // A classe `animate-snow` deve ser definida em `src/index.css`
           className={cn(
-            "absolute rounded-full opacity-70", // Usar rounded-full para div se não usar o caracter ❄
+            //"absolute rounded-full opacity-70", // Usar rounded-full para div se não usar o caracter ❄
             // Definir a cor com base no tema. Isso sobrescreve a cor definida em .animate-snow se for diferente.
             // Para o caracter ❄, a cor é definida no CSS global.
             // Se preferir divs, use: theme === 'dark' ? 'bg-white' : 'bg-black'
+            "absolute rounded-full opacity-100", // <-- Mude para opacity-100 para testar
+            "animate-snow"
           )}
           style={{
             left: `${flake.left}%`,
