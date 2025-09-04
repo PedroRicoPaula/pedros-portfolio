@@ -1,10 +1,8 @@
 import { Card } from "@/components/ui/card";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, ExternalLink, ArrowRight, Code, Brush, Database } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, ArrowRight, Code, Brush, Database, ArrowDown } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { ArrowDown } from 'lucide-react'; // Importe o ícone ArrowDown
-import { Button } from "@/components/ui/button"; // Certifique-se de que o Button está importado
 
 const Index = () => {
   const scrollDown = () => {
